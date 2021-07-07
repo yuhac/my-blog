@@ -1,0 +1,137 @@
+.nav-container {
+  width: 280px;
+  height: 100vh;
+  overflow: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  color: #444;
+  border-right: 1px solid #f3f3f3;
+  .logo {
+    img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #999;
+      flex-shrink: 0;
+    }
+  }
+
+  .menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .menu-list {
+      .btn {
+        width: 100%;
+        height: 48px;
+        font-weight: bold;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(29, 161, 242);
+        &:hover {
+          background-color: rgba(29, 161, 242, 0.7);
+        }
+        
+      }
+      ul {
+        li {
+          display: flex;
+          padding: 4px 0;
+          height: 60px;
+          .menu-item {
+            padding: 12px;
+            color: #0f1419;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: default;
+            .icon {
+              font-size: 24px;
+              margin-right: 10px;
+            }
+            &.active{
+              color: rgb(29, 161, 242);
+
+            }
+            &:hover {
+              background: rgba(29, 161, 242, 0.1);
+              border-radius: 24px;
+              .icon {
+                color: rgb(29, 161, 242);
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+
+  .user-name {
+    padding-left: 10px;
+  }
+  .avatar {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-container {
+    width: 66px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    .menu-container {
+      .menu-list {
+        .btn {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          margin: 0 auto;
+          font-size: 22px;
+        }
+        ul {
+          li {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .menu-item {
+              padding: 12px;
+              .icon {
+                margin-right: 0;
+              }
+              .text {
+                display: none;
+              }
+              &:hover {
+                background: rgba(29, 161, 242, 0.1);
+                .icon {
+                  color: rgb(29, 161, 242);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .user-name {
+      padding-left: 10px;
+      display: none;
+    }
+    .avatar {
+      justify-content: center;
+    }
+  }
+}

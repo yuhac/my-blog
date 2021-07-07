@@ -1,0 +1,17 @@
+.app-container {
+  display: grid;
+  grid-template-columns: 1.1fr 2fr;
+  .header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .main {
+    //  border: 1px solid #000;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app-container {
+    grid-template-columns: 66px auto;
+  }
+}
